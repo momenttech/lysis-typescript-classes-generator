@@ -1,0 +1,32 @@
+{
+  "name": "lysis-typescript-classes-generator",
+  "version": "0.0.6",
+  "description": "Generate TypeScript classes for JSON LD backend",
+  "main": "index.js",
+  "contributors": [
+    "David Duquenoy"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/momenttech/lysis-typescript-classes-generator"
+  },
+  "bugs": {
+    "url": "https://github.com/momenttech/lysis-typescript-classes-generator/issues"
+  },
+  "homepage": "https://momenttech.github.io/lysis-typescript-classes-generator",
+  "keywords": [
+    "lysis",
+    "jsonld",
+    "rest",
+    "api",
+    "generator",
+    "typescript",
+    "angular"
+  ],
+  "devDependencies": {},
+  "dependencies": {
+    "api-lysis": "0.0.4"
+  },
+  "scripts": {}
+}
