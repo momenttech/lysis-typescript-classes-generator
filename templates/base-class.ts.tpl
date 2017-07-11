@@ -5,8 +5,6 @@
 import { {{ type.type }} } from '../{{ type.type }}';
 {{/dependencies}}
 
-{{{ json resource }}}
-
 export class {{ ucc resource.title }}Base {
   {{#each resource.fields}}
   {{#unless writable}}readonly {{/unless}}{{ name }}: {{ jsType type }};

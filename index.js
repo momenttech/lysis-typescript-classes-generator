@@ -3,7 +3,6 @@ var lysisUtils = require('api-lysis').utils;
 var handlebars = lysisUtils.getHandlebars();
 
 var tsClassesGenerator = function(parameters) {
-
   var templatePath = path.join(__dirname, 'templates');
 
   // templates
