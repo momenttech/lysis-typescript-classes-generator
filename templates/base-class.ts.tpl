@@ -6,6 +6,9 @@ import { {{ type.type }} } from '../{{ type.type }}';
 {{/dependencies}}
 
 export class {{ ucc resource.title }}Base {
+  public static readonly _resource: string = '{{ resource.name }}';
+  get _resource(): string { return {{ ucc resource.title }}Base._resource; };
+
   {{#each resource.fields}}
   {{#unless writable}}readonly {{/unless}}{{ name }}: {{ jsType type }};
   {{/each}}
