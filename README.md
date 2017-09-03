@@ -103,12 +103,6 @@ Install this generator:
 npm install lysis-typescript-classes-generator --save-dev
 ```
 
-### Restangular configuration
-
-Install the Restangular config. But how?
-
-This will be available soon.
-
 ### Configuration
 
 Configuration sample:
