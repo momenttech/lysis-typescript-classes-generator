@@ -1,6 +1,6 @@
 {
   "name": "lysis-typescript-classes-generator",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Generate TypeScript classes for JSON LD backend",
   "main": "index.js",
   "contributors": [

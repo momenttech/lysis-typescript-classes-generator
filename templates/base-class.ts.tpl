@@ -15,6 +15,7 @@ export class {{ ucc resource.title }}Base {
 
   {{#each resource.fields}}
   {{#unless type.scalar}}
+  {{#if writable}}
   set{{ ucc name }}(id: number): {{ ucc ../resource.title }}Base {
     this.{{ name }} = new {{ type.type }}();
     this.{{ name }}.id = id;
@@ -22,6 +23,7 @@ export class {{ ucc resource.title }}Base {
     return this;
   }
 
+  {{/if}}
   {{/unless}}
   {{/each}}
 }
