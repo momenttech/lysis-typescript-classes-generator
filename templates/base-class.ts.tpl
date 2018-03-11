@@ -10,11 +10,12 @@ export class {{ ucc resource.title }}Base {
   get _resource(): string { return {{ ucc resource.title }}Base._resource; };
 
   {{#each resource.fields}}
-  {{#unless writable}}readonly {{/unless}}{{ name }}: {{ jsType type }};
+  {{#unless writable}}readonly {{/unless}}{{ name }}: {{ jsType type }}{{#if type.multiple}}[]{{/if}};
   {{/each}}
 
   {{#each resource.fields}}
   {{#unless type.scalar}}
+  {{#unless type.multiple}}
   {{#if writable}}
   set{{ ucc name }}(id: number): {{ ucc ../resource.title }}Base {
     this.{{ name }} = new {{ type.type }}();
@@ -24,6 +25,7 @@ export class {{ ucc resource.title }}Base {
   }
 
   {{/if}}
+  {{/unless}}
   {{/unless}}
   {{/each}}
 }
