@@ -38,9 +38,10 @@ handlebars.registerHelper('dependencies', function(resource, opts) {
   for (var fieldName in resource.fields) {
     var field = resource.fields[fieldName];
     if (!field.type.scalar) {
-      if (cache.indexOf(fieldName) === -1) {
+      var type = field.type.type;
+      if (cache.indexOf(type) === -1) {
         result += opts.fn(field);
-        cache.push(fieldName);
+        cache.push(type);
       }
     }
   }
